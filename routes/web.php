@@ -24,7 +24,7 @@ Route::middleware('auth')->get('/admin', 'Admin\HomeController@index')->name('ad
 Route::middleware('auth')
     ->namespace('Admin')
     ->name('admin.')
-    -prefix('admin')
+    ->prefix('admin')
     ->group(function () {
         Route::get('/home', 'HomeController@index')->name('home');
         Route::resource('comics', ComicController::class);
