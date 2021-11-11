@@ -8,6 +8,7 @@
                 <div class="card-header">{{ __('Dashboard') }}</div>
                 <div>
                     <h1>Benvuenido</h1>
+                    <a href="{{ route('admin.comics.index') }}">I nostri comics</a>
                 </div>
 
                 <div class="card-body">
