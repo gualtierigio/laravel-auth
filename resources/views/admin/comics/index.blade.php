@@ -3,20 +3,22 @@
 @section('content')
 
 <div class="container">
-    <div class="row">
         @forelse ($comics as $comic)
 
-        <div class="col-4">
-
-        </div>
+        <ul>
+            <li>
+                <a href="{{ route('admin.comics.show', $comic->id) }}">
+                    <h3>{{ $comic->title }}</h3>
+                </a>
+            </li>
+        </ul>
+        
             
         @empty
 
         <h2>No more comics, sorry.</h2>
             
         @endforelse
-
-    </div>
 </div>
 
 @endsection
